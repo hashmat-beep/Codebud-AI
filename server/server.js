@@ -4,6 +4,8 @@ import cors from 'cors';
 import OpenAI from 'openai';
 
 dotenv.config();
+console.log('Loaded API Key:', process.env.OPENAI_API_KEY ? '✅ Loaded' : '❌ Missing');
+
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -13,11 +15,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', async (req, res) => {
-  res.status(200).send({
-    message: 'Hello from CodeBud!'
-  });
+// Fix: no async here since it's not needed
+app.get('/', (req, res) => {
+  console.log('GET / hit!');
+  res.status(200).json({ message: 'Hello from CodeBud!' });
 });
+
 
 app.post('/', async (req, res) => {
   try {
@@ -43,4 +46,5 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log('AI server started on http://localhost:5000'));
+app.listen(3000, () => console.log('AI server started on http://localhost:3000'));
+
