@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
     loader(messageDiv);
 
     // fetch data from the server
-    const response = await fetch('http://localhost:5000', {
+    const response = await fetch('http://localhost:3000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -96,9 +96,6 @@ const handleSubmit = async (e) => {
         const data = await response.json();
         const parsedData = data.bot.trim(); // trims any trailing spaces/'\n' 
 
-
-        
-
         typeText(messageDiv, parsedData);
     } else {
         const err = await response.text();
@@ -106,7 +103,6 @@ const handleSubmit = async (e) => {
         messageDiv.innerHTML = "Something went wrong";
         alert(err);
     }
-
 }
 
 form.addEventListener('submit', handleSubmit);
