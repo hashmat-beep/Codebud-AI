@@ -2,21 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeBud - Your Coding AI</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="app">
-      <div id="chat_container"></div>
+    <div id="app" class="main-container">
+      <header class="header">
+        <h1>🤖 CodeBud AI</h1>
+        <p>Ask your coding questions below</p>
+      </header>
 
-      <form>
-        <textarea name="prompt" rows="1" cols="1" placeholder="Ask CodeBud..."></textarea>
-        <button type="submit"><img src="assets/send.svg" /></button>
-        
+      <div id="chat_container" class="chat-container"></div>
+
+      <form class="chat-form">
+        <textarea name="prompt" placeholder="Ask CodeBud..."></textarea>
+        <button type="submit">
+          <img src="assets/send.svg" alt="Send" />
+        </button>
       </form>
     </div>
+
     <script type="module" src="script.js"></script>
   </body>
 </html>
