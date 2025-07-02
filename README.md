@@ -22,3 +22,5 @@ It’s like having your own ChatGPT on a website.
 4. Backend calls OpenAI
 5. The answer is shown on your screen
 
+## 🌐 Live Site
+Check it out here: [CodeBud AI](https://codebud-ai.vercel.app)
