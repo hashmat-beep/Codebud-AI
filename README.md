@@ -30,10 +30,13 @@ cd server
 npm install
 # create a file named .env with your key:
 # OPENAI_API_KEY=sk-...
+
 npm run server
-# or: node index.js
+
 cd client
+
 npm install
+
 npm run dev
 
 Vite will show a local URL (usually http://localhost:5173).
