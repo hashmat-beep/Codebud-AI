@@ -22,5 +22,22 @@ It’s like having your own ChatGPT on a website.
 4. Backend calls OpenAI
 5. The answer is shown on your screen
 
+
+🔧 Setup & Run (local)
+
+Open two terminals (one for server, one for client).
+cd server
+npm install
+# create a file named .env with your key:
+# OPENAI_API_KEY=sk-...
+npm run server
+# or: node index.js
+cd client
+npm install
+npm run dev
+
+Vite will show a local URL (usually http://localhost:5173).
+Open that link in your browser.
+
 ## 🌐 Live Site
 Check it out here: [CodeBud AI](https://codebud-ai.vercel.app)
